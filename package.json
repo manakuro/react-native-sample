@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged",
+    "commit": "git-cz"
   },
   "dependencies": {
     "react": "16.8.3",
@@ -14,10 +16,33 @@
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
     "babel-jest": "^24.8.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^2.3.0",
     "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
     "metro-react-native-babel-preset": "^0.54.1",
     "react-devtools": "^3.6.1",
     "react-test-renderer": "16.8.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "git add"
+    ],
+    "*.tsx": [
+      "tslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "jest": {
     "preset": "react-native"
