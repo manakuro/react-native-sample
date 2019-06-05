@@ -19,6 +19,7 @@
     "@types/react": "^16.8.19",
     "@types/react-native": "^0.57.60",
     "@types/react-test-renderer": "^16.8.1",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
     "babel-eslint": "9.x",
     "babel-jest": "^24.8.0",
     "commitizen": "^3.1.1",
@@ -54,11 +55,11 @@
       "git add"
     ],
     "*.ts": [
-      "tslint --fix",
+      "eslint --fix",
       "git add"
     ],
     "*.tsx": [
-      "tslint --fix",
+      "eslint --fix",
       "git add"
     ]
   },
