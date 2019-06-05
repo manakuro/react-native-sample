@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'react-app', // for editor
+    'react-app',
     'eslint:recommended',
     'plugin:prettier/recommended',
     'prettier/react',
@@ -18,7 +18,7 @@ module.exports = {
         singleQuote: true,
         semi: false,
         trailingComma: 'all',
-        jsxBracketSameLine: true,
+        // jsxBracketSameLine: true,
       },
     ],
   },
