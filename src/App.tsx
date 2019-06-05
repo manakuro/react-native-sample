@@ -19,6 +19,7 @@ const instructions = Platform.select({
 interface Props {
   test: string
 }
+
 export default class App extends React.Component<Props> {
   public render() {
     return (
