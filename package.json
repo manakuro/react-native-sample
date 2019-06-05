@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
+    "@testing-library/react-native": "^4.0.2",
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.19",
     "@types/react-native": "^0.57.60",
@@ -24,6 +25,7 @@
     "babel-jest": "^24.8.0",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
+    "empty": "^0.10.1",
     "eslint": "5.x",
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-react-app": "^4.0.1",
@@ -63,29 +65,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": [
-      "\\.snap$",
-      "<rootDir>/node_modules/"
-    ],
-    "moduleNameMapper": {
-      "app/src/([^\\.]*)$": "<rootDir>/src/$1",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/__mocks__/fileMock.ts"
-    },
-    "cacheDirectory": ".jest/cache"
   },
   "husky": {
     "hooks": {
