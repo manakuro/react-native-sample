@@ -48,18 +48,9 @@
     "typescript": "^3.5.1"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.ts": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.tsx": [
-      "eslint --fix",
-      "git add"
-    ]
+    "linters": {
+      "*.{js,ts,tsx}": ["eslint --fix", "git add"]
+    }
   },
   "config": {
     "commitizen": {
