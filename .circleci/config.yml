@@ -18,6 +18,6 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      - test:
+      - run:
           name: Testing
           command: yarn test
