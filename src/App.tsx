@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
 import WelcomeText from 'app/src/WelcomeText'
@@ -17,9 +9,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 })
 
-interface Props {
-  test: string
-}
+interface Props {}
 
 export default class App extends React.Component<Props> {
   public render() {
