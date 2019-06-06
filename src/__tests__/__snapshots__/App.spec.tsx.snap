@@ -48,7 +48,7 @@ exports[`renders correctly 1`] = `
           }
         }
       >
-        To get started, edit App.js and hey
+        To get started, edit App.js and
       </Text>
       <Text
         style={
