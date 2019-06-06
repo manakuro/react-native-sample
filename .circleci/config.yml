@@ -10,14 +10,27 @@ jobs:
           name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
+
+      - restore_cache:
+          name: Restore Node Modules Cache
+          key: node-v1-{{ checksum "package.json" }}
+
       - run:
           name: Install dependencies
           command: yarn
+
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+
+      - save_cache:
+          name: Node Modules Cache
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
       - run:
           name: Unit Test
           command: |
