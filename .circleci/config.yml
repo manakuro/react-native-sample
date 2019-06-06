@@ -26,7 +26,7 @@ jobs:
             - ~/.cache/yarn
 
       - save_cache:
-          name: Node Modules Cache
+          name: Save Node Modules Cache
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
