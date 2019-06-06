@@ -56,3 +56,4 @@ buck-out/
 *.iml
 .idea
 .jest
+test_output
