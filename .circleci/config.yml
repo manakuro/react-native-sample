@@ -120,5 +120,5 @@ workflows:
     jobs:
       - node
       - ios:
-        requires:
-          - node
+          requires:
+            - node
