@@ -52,7 +52,7 @@ jobs:
 
   ios:
     macos:
-      xcode: "10"
+      xcode: "10.2.0"
     working_directory: ~/react-native-sample
 
     shell: /bin/bash --login -o pipefail
