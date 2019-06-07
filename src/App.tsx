@@ -1,6 +1,8 @@
 import React from 'react'
-import { Platform, StyleSheet, Text, View } from 'react-native'
+import { Platform } from 'react-native'
+import styled from 'styled-components/native'
 import WelcomeText from 'app/src/WelcomeText'
+import { mainBackgroundColour, textColour } from 'app/src/const/style'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -14,30 +16,24 @@ interface Props {}
 export default class App extends React.Component<Props> {
   public render() {
     return (
-      <View style={styles.container}>
+      <StyledView>
         <WelcomeText text="Welcome to React Native" />
-        <Text style={styles.instructions}>To get started, edit App.js and</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+        <Instructions>To get started, edit App.js and</Instructions>
+        <Instructions>{instructions}</Instructions>
+      </StyledView>
     )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-})
+const StyledView = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: ${mainBackgroundColour};
+`
+
+const Instructions = styled.Text`
+  text-align: center;
+  color: ${textColour};
+  margin-bottom: 5px;
+`

@@ -1,18 +1,16 @@
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
+import styled from 'styled-components/native'
 
 interface Props {
   text: string
 }
 
 export default function WelcomeText(props: Props) {
-  return <Text style={styles.welcome}>{props.text}</Text>
+  return <StyledText>{props.text}</StyledText>
 }
 
-const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-})
+const StyledText = styled.Text`
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+`
