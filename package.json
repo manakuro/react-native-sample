@@ -9,7 +9,7 @@
     "run-ios": "react-native run-ios",
     "run-android": "react-native run-android",
     "commit": "git-cz",
-    "precommit": "lint-staged"
+    "precommit": "yarn tsc && lint-staged"
   },
   "dependencies": {
     "react": "16.8.3",

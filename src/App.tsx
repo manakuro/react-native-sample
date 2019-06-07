@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Platform } from 'react-native'
+import { Platform } from 'react-native'
 import styled from 'styled-components/native'
 import WelcomeText from 'app/src/WelcomeText'
 import { mainBackgroundColour, textColour } from 'app/src/const/style'
