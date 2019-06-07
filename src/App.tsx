@@ -1,8 +1,9 @@
 import React from 'react'
-import { Platform } from 'react-native'
+import { Image, Platform } from 'react-native'
 import styled from 'styled-components/native'
 import WelcomeText from 'app/src/WelcomeText'
 import { mainBackgroundColour, textColour } from 'app/src/const/style'
+import img from 'app/src/assets/images/manato.jpg'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,6 +21,7 @@ export default class App extends React.Component<Props> {
         <WelcomeText text="Welcome to React Native" />
         <Instructions>To get started, edit App.js and</Instructions>
         <Instructions>{instructions}</Instructions>
+        <StyledImage source={img} />
       </StyledView>
     )
   }
@@ -36,4 +38,9 @@ const Instructions = styled.Text`
   text-align: center;
   color: ${textColour};
   margin-bottom: 5px;
+`
+
+const StyledImage = styled.Image`
+  width: 100px;
+  height: 100px;
 `
