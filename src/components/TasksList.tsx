@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import styled from 'styled-components/native'
 import { textColour } from 'app/src/const/style'
 import { FlatList } from 'react-native'
@@ -25,7 +25,7 @@ export default function TasksList(props: Props) {
 }
 
 // @see https://github.com/styled-components/styled-components/issues/1803
-const TaskList = styled(FlatList as any)``
+const TaskList = styled(FlatList as new () => FlatList<Task>)``
 
 const TaskListItem = styled.Text`
   padding: 10px 0;
