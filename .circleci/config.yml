@@ -32,6 +32,10 @@ jobs:
             - node_modules
 
       - run:
+          name: Typing check
+          command: yarn tsc
+
+      - run:
           name: Unit Test
           command: |
             mkdir -p test-results/jest
